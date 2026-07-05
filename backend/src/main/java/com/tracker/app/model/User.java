@@ -32,6 +32,9 @@ public class User {
     @Size(max = 20)
     private String role = "ROLE_USER";
 
+    @Column(name = "resume_text", columnDefinition = "TEXT")
+    private String resumeText;
+
     public User() {}
 
     public User(String username, String email, String password) {
@@ -79,5 +82,13 @@ public class User {
 
     public void setRole(String role) {
         this.role = role;
+    }
+
+    public String getResumeText() {
+        return resumeText;
+    }
+
+    public void setResumeText(String resumeText) {
+        this.resumeText = resumeText;
     }
 }
